@@ -30,6 +30,14 @@ namespace Ex4b
                 //arr[i] = Int32.Parse(Console.ReadLine());
                 arr[i] = rand.Next() % 100 - rand.Next() % 100;
             }
+            OutputNum(arr);
+        }
+        static void OutputNum(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("A[{0}] = {1}",i,arr[i]);
+            }
         }
         public static void Problem1b(int[] arr)
         {
