@@ -10,7 +10,8 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hello world");
+            double p = (double)1 / 2;
+            Console.WriteLine(p);
         }
 
         public static bool IsOdd(int n)
@@ -76,14 +77,22 @@ namespace ConsoleApplication1
             return (((int)x / 1));
         }
 
-        public static int Pow(int x ,int y)
+        public static double Pow(double x ,int y)
         {
-            int p = 1;
-                for(int i = 0 ; i < y ; i++)
+            double p = 1;
+            if (y > 0)
+            {
+                for (int i = 0; i < y; i++)
                 {
                     p *= x;
                 }
-            
+               
+            }
+            if (y < 0)
+            {
+                p = Pow((double)1 / x, -y);
+            }
+
             return p;
              
         }

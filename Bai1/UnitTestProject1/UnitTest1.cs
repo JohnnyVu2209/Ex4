@@ -92,8 +92,8 @@ namespace UnitTestProject1
             double pow1 = Program.Pow(2, 3);
             Assert.AreEqual(8, pow1);
 
-            double pow2 = Program.Pow(2, 0);
-            Assert.AreEqual(1, pow2);
+            double pow2 = Program.Pow(2, -3);
+            Assert.AreEqual(0.125, pow2);
         }
          [TestMethod]
         public void Sin()
