@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex4b
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -22,7 +22,7 @@ namespace Ex4b
             Problem1f(SeriesNum);
             Problem1g(SeriesNum);
         }
-        static void InputNum(int[] arr)
+        public static void InputNum(int[] arr)
         {
             Random rand = new Random();
             for (int i = 0; i < arr.Length; i++)
@@ -31,40 +31,40 @@ namespace Ex4b
                 arr[i] = rand.Next() % 100 - rand.Next() % 100;
             }
         }
-        static void Problem1b(int[] arr)
+        public static void Problem1b(int[] arr)
         {
             if(Contain5(arr) == true)
                 Console.WriteLine("Your Series Numbers have contains 5");
             else
                 Console.WriteLine("Your Series Numbers have NOT contains 5");
         }
-         static void Problem1c(int[] arr)
+        public static void Problem1c(int[] arr)
         {
             if (Contain5Or6(arr) == true)
                 Console.WriteLine("Your Series Numbers have contains 5 or 6");
             else
                 Console.WriteLine("Your Series Numbers have NOT contains 5 or 6");
         }
-        static void Problem1d(int[] arr)
+        public static void Problem1d(int[] arr)
         {
             if (Contain5And6(arr) == true)
                 Console.WriteLine("Your Series Numbers have contains both 5 and 6");
             else
                 Console.WriteLine("Your Series Numbers have NOT contains both 5 and 6");
         }
-        static void Problem1e(int[] arr)
+        public static void Problem1e(int[] arr)
         {
             Console.WriteLine("Your Series Number have {0} number 5",Count5(arr));
         }
-        static void Problem1f(int[] arr)
+        public static void Problem1f(int[] arr)
         {
             Console.WriteLine("Your Series Number have {0} number 5 and {1} number 6",Count5(arr),Count6(arr));
         }
-        static void Problem1g(int[] arr)
+        public static void Problem1g(int[] arr)
         {
             Console.WriteLine("the sum of all numbers is {0}",SumArr(arr));
         }
-        static bool Contain5(int[] arr)
+        public static bool Contain5(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {
@@ -75,7 +75,7 @@ namespace Ex4b
             }
             return false;
         }
-        static bool Contain5And6(int[] arr)
+        public static bool Contain5And6(int[] arr)
         {
            int check1 = 0,check2 = 0;
             for (int i = 0; i < arr.Length; i++)
@@ -92,7 +92,7 @@ namespace Ex4b
                 return true;
             return false;
         }
-        static bool Contain5Or6(int[] arr)
+        public static bool Contain5Or6(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {
@@ -101,7 +101,7 @@ namespace Ex4b
             }
             return false;
         }
-        static int Count5(int[]arr)
+        public static int Count5(int[] arr)
         {
             int count =0;
             for (int i = 0; i < arr.Length; i++)
@@ -111,7 +111,7 @@ namespace Ex4b
             }
             return count;
         }
-        static int Count6(int[]arr)
+        public static int Count6(int[] arr)
         {
             int count = 0;
             for (int i = 0; i < arr.Length; i++)
@@ -121,7 +121,7 @@ namespace Ex4b
             }
             return count;
         }
-        static int SumArr(int[] arr)
+        public static int SumArr(int[] arr)
         {
             int sum = 0;
             for (int i = 0; i < arr.Length; i++)
