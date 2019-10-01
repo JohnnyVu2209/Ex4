@@ -66,23 +66,23 @@ namespace UnitTestProject1
         [TestMethod]
         public void Ceil()
         {
-            int ceil1 = Program.Ceil(2.5);
+            int ceil1 = Program.Ceil(2.5f);
             Assert.AreEqual(3, ceil1);
 
-            int ceil2 = Program.Ceil(-5.1);
+            int ceil2 = Program.Ceil(-5.1f);
             Assert.AreEqual(-5, ceil2);
 
-            int ceil3 = Program.Ceil(-4.9);
+            int ceil3 = Program.Ceil(-4.9f);
             Assert.AreEqual(-4, ceil3);
 
         }
         [TestMethod]
         public void Floor()
         {
-            int floor1 = Program.Floor(-5.1);
+            int floor1 = Program.Floor(-5.1f);
             Assert.AreEqual(-6 , floor1);
 
-            int floor2 = Program.Floor(6.2);
+            int floor2 = Program.Floor(6.2f);
             Assert.AreEqual(6 , floor2);
 
         }

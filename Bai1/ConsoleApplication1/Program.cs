@@ -10,8 +10,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            double p = (double)1 / 2;
-            Console.WriteLine(p);
+            
         }
 
         public static bool IsOdd(int n)
@@ -59,22 +58,27 @@ namespace ConsoleApplication1
             return n;
         }
 
-        public static int Ceil(double x)
+        public static int Ceil(float x)
         {
-            if (x < 0)
+            int n = (int)x;
+            if (n != x)
             {
-                return ((int)x / 1);
+                if(x > 0)
+                {
+                    return (n + 1);
+                }
             }
-            else
-            {
-                return (((int)x / 1) + 1);
-            }
+            return n;
         }
-        public static int Floor(double x)
+        public static int Floor(float x)
         {
-            if(x < 0)
-                return (((int)x / 1) - 1);
-            return (((int)x / 1));
+            int n = (int)x;
+            if(n != x)
+            { 
+                if(x < 0)
+                    return (n - 1);
+            }
+            return n;
         }
 
         public static double Pow(double x ,int y)
@@ -85,14 +89,12 @@ namespace ConsoleApplication1
                 for (int i = 0; i < y; i++)
                 {
                     p *= x;
-                }
-               
+                }         
             }
             if (y < 0)
             {
                 p = Pow((double)1 / x, -y);
             }
-
             return p;
              
         }
