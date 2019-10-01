@@ -30,30 +30,81 @@ namespace ConsoleApplication1
         }
         public static bool Prime(int n)
         {
-            bool result = true;
-            if (n < 2)
+            if(n < 2)
             {
                 return false;
             }
-            if (n < 0)
+            else if (n == 2)
+                return true;
+            else if (n > 2)
             {
-
-
-                for (int i = 2; i <= n; i++)
+                for (int i = 2; i < n; i++)
                 {
-                    int flag = 1;
                     if (n % i == 0)
-                    {
-                        flag++;
-                    }
-                    if (flag == 2)
-                    {
-                        return result;
-                    }
+                        return false;
                 }
-               
             }
+            return true;
+        }
+
+        public static int Square(int n)
+        { return n * n; }
+                    
+        public static int Cube(int n)
+        { return n * n * n; }
+
+        public static int Abs(int n)
+        {
+            return n;
+        }
+
+        public static int Ceil(double x)
+        {
+            if (x < 0)
+            {
+                return ((int)x / 1);
+            }
+            else
+            {
+                return (((int)x / 1) + 1);
+            }
+        }
+        public static int Floor(double x)
+        {
+            if(x < 0)
+                return (((int)x / 1) - 1);
+            return (((int)x / 1));
+        }
+
+        public static int Pow(int x ,int y)
+        {
+            int p = 1;
+                for(int i = 0 ; i < y ; i++)
+                {
+                    p *= x;
+                }
+            
+            return p;
+             
+        }
+        public static long Factorial(long n)
+        {
+            if (n == 1)
+                return 1;
+            return Factorial(n - 1) * n;
+        }
+        public static double Sin(int x)
+        {
+            double result = 0;
+            for (int k = 0; k <= x ; k++)
+            {
+                result += (double)(Pow(-1, k)*Pow(x,2*k+1))/Factorial(2*k+1);
+            }
+
+
             return result;
         }
+
+
     }
 }

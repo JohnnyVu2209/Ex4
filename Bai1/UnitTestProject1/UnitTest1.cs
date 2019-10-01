@@ -48,6 +48,60 @@ namespace UnitTestProject1
 
            
 
+
+        }
+        [TestMethod]
+        public void Abs()
+        {
+            int abs1 = Program.Abs(-8);
+            Assert.AreEqual(-8, abs1);
+
+            int abs2 = Program.Abs(0);
+            Assert.AreEqual(0, abs2);
+
+            int abs3 = Program.Abs(8);
+            Assert.AreEqual(8, abs3);
+        }
+
+        [TestMethod]
+        public void Ceil()
+        {
+            int ceil1 = Program.Ceil(2.5);
+            Assert.AreEqual(3, ceil1);
+
+            int ceil2 = Program.Ceil(-5.1);
+            Assert.AreEqual(-5, ceil2);
+
+            int ceil3 = Program.Ceil(-4.9);
+            Assert.AreEqual(-4, ceil3);
+
+        }
+        [TestMethod]
+        public void Floor()
+        {
+            int floor1 = Program.Floor(-5.1);
+            Assert.AreEqual(-6 , floor1);
+
+            int floor2 = Program.Floor(6.2);
+            Assert.AreEqual(6 , floor2);
+
+        }
+        [TestMethod]
+        public void Pow()
+        {
+            double pow1 = Program.Pow(2, 3);
+            Assert.AreEqual(8, pow1);
+
+            double pow2 = Program.Pow(2, 0);
+            Assert.AreEqual(1, pow2);
+        }
+         [TestMethod]
+        public void Sin()
+        {
+            double sinx1 = Program.Sin(0);
+            Assert.AreEqual(0, sinx1);
+
+            
         }
     }
 }
